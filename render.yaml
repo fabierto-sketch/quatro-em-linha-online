@@ -1,0 +1,17 @@
+# Blueprint opcional do Render (Dashboard > New > Blueprint).
+# Também pode criar o serviço manualmente — ver README.md.
+services:
+  - type: web
+    name: quatro-em-linha-online
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: FORCE_HTTPS
+        value: "true"
+      - key: ADMIN_PASSWORD
+        sync: false # o Render pede o valor ao criar o serviço

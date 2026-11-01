@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b1833" />
+  <meta name="description" content="Quatro em Linha Online — o clássico, frente a frente, à distância. Salas privadas, videochamada e chat." />
+  <title>Quatro em Linha Online</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Ícones (SVG sprite) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-mic" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3zM5 11a7 7 0 0 0 14 0M12 18v3M8 21h8"/></symbol>
+      <symbol id="i-mic-off" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 3l18 18M9 9v3a3 3 0 0 0 5.1 2.1M15 9.3V6a3 3 0 0 0-5.7-1.3M5 11a7 7 0 0 0 11.2 5.6M19 11a7 7 0 0 1-.6 2.8M12 18v3M8 21h8"/></symbol>
+      <symbol id="i-cam" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M15 10l5-3v10l-5-3M4 6h9a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/></symbol>
+      <symbol id="i-cam-off" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 3l18 18M15 10l5-3v10l-2.2-1.3M10.5 6H13a2 2 0 0 1 2 2v2.5M15 15.5V16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h1"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+      <symbol id="i-phone-off" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M10.7 13.3a16 16 0 0 0 3.3 2.5l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-3.3-2.7M5.2 13.8A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8M22 2L2 22"/></symbol>
+      <symbol id="i-send" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></symbol>
+      <symbol id="i-smile" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></g></symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></g></symbol>
+      <symbol id="i-settings" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></g></symbol>
+      <symbol id="i-exit" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></symbol>
+      <symbol id="i-refresh" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M23 4v6h-6M1 20v-6h6M3.5 9a9 9 0 0 1 14.9-3.4L23 10M1 14l4.6 4.4A9 9 0 0 0 20.5 15"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></g></symbol>
+      <symbol id="i-hash" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 9h16M4 15h16M10 3L8 21M16 3l-2 18"/></symbol>
+      <symbol id="i-trophy" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4zM17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></symbol>
+      <symbol id="i-history" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5M12 7v5l3 2"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M18 6L6 18M6 6l12 12"/></symbol>
+      <symbol id="i-expand" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></symbol>
+      <symbol id="i-link" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></symbol>
+      <symbol id="i-volume" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M11 5L6 9H2v6h4l5 4V5zM15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/></symbol>
+      <symbol id="i-music" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></g></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></symbol>
+      <symbol id="i-wifi" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12.6a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0M2 8.8a15 15 0 0 1 20 0M12 20h.01"/></symbol>
+      <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.4 8.4 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/></symbol>
+    </defs>
+  </svg>
+
+  <div id="ambient" class="ambient" aria-hidden="true"></div>
+
+  <!-- ============ ENTRADA ============ -->
+  <main id="screen-lobby" class="screen screen-lobby">
+    <div class="lobby-card glass">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <span class="piece red"></span><span class="piece yellow"></span><span class="piece red"></span><span class="piece yellow"></span>
+        </div>
+        <h1>Quatro em Linha <em>Online</em></h1>
+        <p class="tagline">O clássico de sempre, frente a frente — mesmo à distância.</p>
+      </div>
+
+      <form id="join-form" class="join-form" autocomplete="off" novalidate>
+        <label class="field">
+          <span class="field-label">Código da mesa</span>
+          <input id="join-code" class="input input-code" inputmode="text" maxlength="7" placeholder="K7M4QX" spellcheck="false" autocapitalize="characters" required />
+        </label>
+        <div id="room-info" class="room-info" aria-live="polite"></div>
+
+        <label class="field">
+          <span class="field-label">O teu nome</span>
+          <input id="join-name" class="input" maxlength="20" placeholder="Como te chamas?" required />
+        </label>
+
+        <fieldset class="color-pick">
+          <legend class="field-label">A tua cor</legend>
+          <label class="color-option">
+            <input type="radio" name="color" value="red" checked />
+            <span class="piece red" aria-hidden="true"></span>
+            <span class="color-name">Vermelho</span>
+            <small class="seat-note" data-seat="red"></small>
+          </label>
+          <label class="color-option">
+            <input type="radio" name="color" value="yellow" />
+            <span class="piece yellow" aria-hidden="true"></span>
+            <span class="color-name">Amarelo</span>
+            <small class="seat-note" data-seat="yellow"></small>
+          </label>
+        </fieldset>
+
+        <button id="join-btn" class="btn btn-gold btn-lg" type="submit">Sentar à mesa</button>
+        <p id="join-error" class="form-error" role="alert"></p>
+      </form>
+
+      <p class="lobby-note">As mesas são privadas e criadas pelo anfitrião. Entra com o link de convite ou com o código de 6 caracteres.</p>
+    </div>
+    <footer class="lobby-footer">
+      <span>Portugal 🇵🇹 · Brasil 🇧🇷 · Juntos à distância ❤️</span>
+      <a href="/admin" class="admin-link">Área do anfitrião</a>
+    </footer>
+  </main>
+
+  <!-- ============ JOGO ============ -->
+  <div id="screen-game" class="screen screen-game" hidden>
+    <header class="topbar">
+      <div class="topbar-brand">
+        <span class="piece red sm" aria-hidden="true"></span><span class="piece yellow sm" aria-hidden="true"></span>
+        <strong>Quatro em Linha</strong>
+      </div>
+      <button id="room-chip" class="chip chip-code" title="Copiar convite">
+        <svg class="ico"><use href="#i-link"/></svg><span>Mesa <b id="room-code">——</b></span>
+      </button>
+      <div id="conn-pill" class="pill pill-ok" title="Estado da ligação">
+        <span class="dot"></span><span id="conn-text">Ligado</span>
+      </div>
+      <div class="topbar-actions">
+        <button id="btn-settings" class="icon-btn" title="Definições" aria-label="Definições"><svg class="ico"><use href="#i-settings"/></svg></button>
+        <button id="btn-leave" class="icon-btn danger" title="Abandonar mesa" aria-label="Abandonar mesa"><svg class="ico"><use href="#i-exit"/></svg></button>
+      </div>
+    </header>
+
+    <div class="romance-banner" aria-hidden="true"><span>Portugal 🇵🇹</span><span class="heart">❤️</span><span>🇧🇷 Brasil</span></div>
+
+    <div class="layout">
+      <!-- Esquerda: jogadores e estatísticas -->
+      <aside class="panel panel-left">
+        <section class="players">
+          <div class="player-card" data-color="red">
+            <span class="piece red" aria-hidden="true"></span>
+            <div class="player-meta">
+              <span class="player-name">—</span>
+              <span class="player-status"><span class="dot"></span><span class="status-text">À espera</span></span>
+            </div>
+            <span class="player-score" title="Vitórias">0</span>
+            <span class="turn-tag">A jogar</span>
+          </div>
+          <div class="versus">VS</div>
+          <div class="player-card" data-color="yellow">
+            <span class="piece yellow" aria-hidden="true"></span>
+            <div class="player-meta">
+              <span class="player-name">—</span>
+              <span class="player-status"><span class="dot"></span><span class="status-text">À espera</span></span>
+            </div>
+            <span class="player-score" title="Vitórias">0</span>
+            <span class="turn-tag">A jogar</span>
+          </div>
+        </section>
+
+        <section class="stats">
+          <div class="stat"><svg class="ico"><use href="#i-hash"/></svg><span>Jogadas</span><b id="stat-moves">0</b></div>
+          <div class="stat"><svg class="ico"><use href="#i-clock"/></svg><span>Tempo</span><b id="stat-timer">00:00</b></div>
+          <div class="stat"><svg class="ico"><use href="#i-trophy"/></svg><span>Partida</span><b id="stat-round">—</b></div>
+          <div class="stat"><svg class="ico"><use href="#i-refresh"/></svg><span>Empates</span><b id="stat-draws">0</b></div>
+        </section>
+
+        <section class="history card-section">
+          <h3><svg class="ico"><use href="#i-history"/></svg> Últimas jogadas</h3>
+          <ol id="history-list" class="history-list"><li class="empty">Ainda sem jogadas.</li></ol>
+        </section>
+      </aside>
+
+      <!-- Centro: tabuleiro -->
+      <section class="arena">
+        <div id="turn-banner" class="turn-banner">A preparar a mesa…</div>
+        <div class="board-area">
+          <div id="board" class="board-host" aria-label="Tabuleiro de Quatro em Linha"></div>
+          <div id="waiting-overlay" class="waiting-overlay" hidden>
+            <div class="waiting-card glass">
+              <div class="spinner" aria-hidden="true"><span class="piece red"></span><span class="piece yellow"></span></div>
+              <h2>À espera do adversário</h2>
+              <p>Partilha o convite para começarem a jogar.</p>
+              <div class="invite-box">
+                <code id="invite-code">——————</code>
+                <button id="btn-copy-invite" class="btn btn-ghost"><svg class="ico"><use href="#i-copy"/></svg> Copiar convite</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="arena-actions">
+          <button id="btn-rematch" class="btn btn-gold"><svg class="ico"><use href="#i-refresh"/></svg> <span>Pedir revanche</span></button>
+          <button id="btn-leave-2" class="btn btn-ghost"><svg class="ico"><use href="#i-exit"/></svg> Abandonar</button>
+        </div>
+      </section>
+
+      <!-- Direita: vídeo e chat -->
+      <aside class="panel panel-right">
+        <section id="video-panel" class="video-panel" data-state="idle">
+          <div class="video-stage">
+            <video id="remote-video" autoplay playsinline></video>
+            <div class="video-placeholder">
+              <svg class="ico ico-xl"><use href="#i-cam"/></svg>
+              <span id="video-hint">Videochamada com o adversário</span>
+            </div>
+            <div id="remote-media" class="remote-media" hidden></div>
+            <video id="local-video" class="local-video" autoplay playsinline muted></video>
+          </div>
+          <div class="video-controls">
+            <button id="btn-call" class="ctrl ctrl-call" title="Iniciar videochamada" aria-label="Iniciar videochamada"><svg class="ico"><use href="#i-phone"/></svg><span>Ligar</span></button>
+            <button id="btn-mic" class="ctrl" title="Microfone" aria-label="Microfone" disabled><svg class="ico"><use href="#i-mic"/></svg></button>
+            <button id="btn-cam" class="ctrl" title="Câmara" aria-label="Câmara" disabled><svg class="ico"><use href="#i-cam"/></svg></button>
+            <button id="btn-hangup" class="ctrl ctrl-hangup" title="Desligar chamada" aria-label="Desligar chamada" disabled><svg class="ico"><use href="#i-phone-off"/></svg></button>
+            <button id="btn-expand" class="ctrl" title="Ecrã inteiro" aria-label="Ecrã inteiro"><svg class="ico"><use href="#i-expand"/></svg></button>
+          </div>
+        </section>
+
+        <section class="chat">
+          <header class="chat-header"><svg class="ico"><use href="#i-chat"/></svg> Chat privado <span id="typing" class="typing" hidden>a escrever…</span></header>
+          <div id="chat-list" class="chat-list" aria-live="polite"></div>
+          <form id="chat-form" class="chat-form" autocomplete="off">
+            <button type="button" id="btn-emoji" class="icon-btn" aria-label="Emojis"><svg class="ico"><use href="#i-smile"/></svg></button>
+            <input id="chat-input" class="input" maxlength="400" placeholder="Escreve uma mensagem…" />
+            <button type="submit" class="icon-btn send" aria-label="Enviar"><svg class="ico"><use href="#i-send"/></svg></button>
+            <div id="emoji-picker" class="emoji-picker glass" hidden></div>
+          </form>
+        </section>
+      </aside>
+    </div>
+  </div>
+
+  <!-- ============ MODAIS ============ -->
+  <div id="modal-settings" class="modal" hidden>
+    <div class="modal-card glass">
+      <button class="modal-close icon-btn" data-close aria-label="Fechar"><svg class="ico"><use href="#i-x"/></svg></button>
+      <h2>Definições</h2>
+      <label class="toggle-row"><svg class="ico"><use href="#i-volume"/></svg><span>Efeitos sonoros</span><input type="checkbox" id="set-sfx" class="switch" /></label>
+      <label class="toggle-row"><svg class="ico"><use href="#i-music"/></svg><span>Música ambiente</span><input type="checkbox" id="set-music" class="switch" /></label>
+      <label class="toggle-row"><svg class="ico"><use href="#i-heart"/></svg><span>Modo noite romântica<small>Portugal ❤️ Brasil</small></span><input type="checkbox" id="set-romantic" class="switch" /></label>
+      <label class="range-row"><span>Volume</span><input type="range" id="set-volume" min="0" max="100" value="70" /></label>
+    </div>
+  </div>
+
+  <div id="modal-confirm" class="modal" hidden>
+    <div class="modal-card glass small">
+      <h2 id="confirm-title">Abandonar a mesa?</h2>
+      <p id="confirm-text">O teu lugar fica livre e a partida em curso termina.</p>
+      <div class="modal-actions">
+        <button class="btn btn-ghost" data-close>Cancelar</button>
+        <button id="confirm-ok" class="btn btn-danger">Abandonar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-result" class="modal modal-result" hidden>
+    <div class="modal-card glass result-card">
+      <div class="result-badge" id="result-badge"><span class="piece red"></span></div>
+      <h2 id="result-title">Vitória!</h2>
+      <p id="result-text"></p>
+      <div class="modal-actions">
+        <button class="btn btn-ghost" data-close>Ver tabuleiro</button>
+        <button id="result-rematch" class="btn btn-gold"><svg class="ico"><use href="#i-refresh"/></svg> Jogar novamente</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-call" class="modal" hidden>
+    <div class="modal-card glass small call-card">
+      <div class="call-pulse"><svg class="ico ico-xl"><use href="#i-phone"/></svg></div>
+      <h2><span id="call-from">O adversário</span> está a ligar</h2>
+      <p>Videochamada privada entre os dois jogadores.</p>
+      <div class="modal-actions">
+        <button id="call-decline" class="btn btn-danger"><svg class="ico"><use href="#i-phone-off"/></svg> Recusar</button>
+        <button id="call-accept" class="btn btn-success"><svg class="ico"><use href="#i-phone"/></svg> Atender</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+  <canvas id="confetti" class="confetti" aria-hidden="true"></canvas>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="game.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

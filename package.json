@@ -1,0 +1,23 @@
+{
+  "name": "quatro-em-linha-online",
+  "version": "1.0.0",
+  "description": "Quatro em Linha multiplayer online com salas privadas, videochamada e chat. Portugal ❤️ Brasil.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node test/run-tests.js"
+  },
+  "engines": {
+    "node": ">=18.18"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "socket.io-client": "^4.8.1"
+  },
+  "license": "MIT",
+  "private": true
+}
